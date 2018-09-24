@@ -31,7 +31,11 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN set -x \
     && apt-get -yqq update \
     && apt-get -yqq dist-upgrade \
-    && apt-get install -y metasploit-framework kali-linux kali-linux-wireless kali-linux-top10 mdk3 \
+    && apt-get install -y metasploit-framework \
+                          kali-linux kali-linux-wireless \
+                          kali-linux-top10 \
+                          mdk3 \
+                          pciutils \
     && apt-get clean
     
 CMD ["bash"]
