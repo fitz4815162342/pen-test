@@ -34,8 +34,8 @@ RUN set -x \
     && apt-get install -y metasploit-framework \
                           kali-linux kali-linux-wireless \
                           kali-linux-top10 \
-                          mdk3 \
-                          pciutils \
+                          mdk3 hping3 \
+                          pciutils bash-completion \
     && apt-get clean
 
 RUN mkdir -p /root/persistent && chmod 777 -R /root/persistent
