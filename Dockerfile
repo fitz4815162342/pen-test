@@ -37,5 +37,8 @@ RUN set -x \
                           mdk3 \
                           pciutils \
     && apt-get clean
-    
+
+RUN mkdir -p /root/persistent && chmod 777 -R /root/persistent
+VOLUME /root/persistent
+
 CMD ["bash"]
